@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="667.0" style="-fx-background-color: #93b597;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RouteFinder.RouteController">
+   <children>
+      <VBox prefHeight="553.0" prefWidth="145.0" style="-fx-background-color: #326139;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#LoadData" prefHeight="49.0" prefWidth="144.0" style="-fx-background-color: #4c7051;" text="Load Data" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#ShowSingleRoute" prefHeight="57.0" prefWidth="144.0" style="-fx-background-color: #68996f;" text="Show Single" textFill="WHITE" />
+            <Button layoutX="10.0" layoutY="45.0" mnemonicParsing="false" onAction="#ShowFastestRoute" prefHeight="60.0" prefWidth="144.0" style="-fx-background-color: #4c7051;" text="Show Fastest" textFill="WHITE" />
+            <Button mnemonicParsing="false" onAction="#ResetMap" prefHeight="57.0" prefWidth="144.0" style="-fx-background-color: #68996f;" text="Reset Map" textFill="WHITE" />
+         </children>
+      </VBox>
+      <HBox layoutX="145.0" prefHeight="41.0" prefWidth="448.0" style="-fx-background-color: #15471c;">
+         <children>
+            <ComboBox fx:id="start" prefWidth="150.0" promptText="Starting Destination" style="-fx-background-color: #68996f;" />
+            <ComboBox fx:id="waypoint" prefWidth="150.0" promptText="Waypoint" style="-fx-background-color: #4c7051;" />
+            <ComboBox fx:id="end" prefHeight="24.0" prefWidth="144.0" promptText="Arrival Destination" style="-fx-background-color: #68996f;" />
+         </children>
+      </HBox>
+      <ImageView fx:id="mapView" fitHeight="273.0" fitWidth="488.0" layoutX="174.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/London_Underground_Zone_1_Highlighted.svg.png" />
+         </image></ImageView>
+      <ListView fx:id="viewRoute" layoutX="261.0" layoutY="337.0" prefHeight="204.0" prefWidth="304.0" />
+   </children>
+</AnchorPane>
